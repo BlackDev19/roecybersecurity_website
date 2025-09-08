@@ -1,0 +1,710 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "courses": "Training",
+      "shop": "Shop",
+      "about": "About",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "languageSelector": {
+      "label": "Language selector",
+      "fr": "Français",
+      "en": "English"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "slogan": "Expertise • Training • Equipment"
+  },
+  "buttons": {
+    "aboutUs": "ABOUT US",
+    "register": "REGISTER",
+    "shop": "SHOP",
+    "courses": "TRAINING",
+    "contact": "EMERGENCY",
+    "planConsultation": "Schedule a Consultation",
+    "exploreSolutions": "Explore our Solutions",
+    "hardwareShop": "Our Computers",
+    "learnMore": "Learn more"
+  },
+  "hero": {
+    "welcome": "Welcome to",
+    "companyName": "ROECybersecurity",
+    "subtitle": "Excellence in cybersecurity. Expertise, equipment, trust.",
+    "rotatingSlogans": [
+      "🔒 Your cybersecurity, our mission. Your digital future, our commitment.",
+      "🚀 Innovate, learn and protect your data with confidence.",
+      "💻 The power of technology serving security and digital freedom."
+    ]
+  },
+
+    "specifications": {
+      "performance": "Performance",
+      "performanceDesc": "Intel Core i9 processor for maximum power.",
+      "ram": "RAM Memory",
+      "ramDesc": "Up to 96 GB for smooth multitasking.",
+      "graphics": "Graphics",
+      "graphicsDesc": "NVIDIA RTX 4060 card for exceptional performance.",
+      "security": "Security",
+      "securityDesc": "Designed for ethical hackers and demanding businesses."
+},
+
+      "ordinateur": {
+  "title": "The laptop designed for critical environments",
+  "subtitle": "Enhanced security, extreme performance — built for demanding businesses."
+},
+
+
+  
+  "services": {
+    "title": "Our Cybersecurity Solutions",
+    "subtitle": "Protect your business with strategic, innovative solutions tailored to your specific needs.",
+    "list": [
+      {
+        "title": "Security Audit",
+        "description": "80% of companies that suffered a data breach had not performed a comprehensive audit. Our audits identify critical vulnerabilities before they are exploited."
+      },
+      {
+        "title": "Penetration Testing",
+        "description": "In 2022, more than 493 million ransomware attacks were detected worldwide. Our pentests simulate these threats to strengthen your defenses."
+      },
+      {
+        "title": "Training",
+        "description": "20% of breaches are due to human error. Our interactive training reduces this risk by strengthening your team's skills."
+      },
+      {
+        "title": "Certifications",
+        "description": "ISO 27001 certification is globally recognized and required in sensitive sectors. We guide you towards ISO 27001, SOC 2 and GDPR."
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Accelerate your digital transformation",
+    "subtitle": "ROECybersecurity relies on real data to anticipate threats and protect your digital assets.",
+    "stats": [
+      { "number": "60%", "label": "SMEs targeted by cyberattacks" },
+      { "number": "300,000+", "label": "Professionals trained annually worldwide" },
+      { "number": "93%", "label": "Vulnerable networks detected in enterprises" },
+      { "number": "24/7", "label": "Monitoring & incident response" }
+    ],
+    "socialsTitle": "Follow our expertise and innovations",
+    "socialsTooltip": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "tiktok": "TikTok"
+    },
+    "newsletter": "Stay informed about our latest cybersecurity innovations"
+  },
+  "footer": {
+    "title": "🛡️ Your trust, our commitment",
+    "description": "ROECybersecurity is committed to respecting the highest standards of security and confidentiality",
+    "certifications": {
+      "gdpr": "100% GDPR Compliant",
+      "iso": "ISO 27001 Certified",
+      "audit": "Secure Audit"
+    },
+    "copyright": "© {year} ROECybersecurity - All rights reserved",
+    "developed": "Developed according to GDPR standards"
+  },
+  "shop": {
+    "title": "ROE Cybersecurity Laptop",
+    "purpose": "Designed for ethical hackers, IT students and businesses demanding performance and security.",
+    "startingPrice": "Starting price: $2,850",
+    "delivery": "Delivery: USA - 2 weeks, International - 3 weeks depending on location",
+    "bonus": "Included bonus: 2 64GB USB keys with pre-installed OS and 2-year warranty",
+    "configurationsTitle": "Available Configurations",
+    "configurations": {
+      "0": "32 GB RAM • 500 GB SSD • Core i9 (14th Gen) • RTX 4060 • $2,850",
+      "1": "32 GB RAM • 1 TB SSD • Core i9 (14th Gen) • RTX 4060 • $3,000",
+      "2": "64 GB RAM • 2 TB SSD • Core i9 (14th Gen) • RTX 4060 • $3,400",
+      "3": "96 GB RAM • 4 TB SSD • Core i9 (14th Gen) • RTX 4060 • $4,000"
+    },
+    "cart": "Cart",
+    "alreadyAdded": "Already added",
+    "addToCart": "Add to cart",
+    "downloadFlyer": "Download flyer",
+    "alreadyDownloaded": "Already downloaded",
+    "previous": "Previous",
+    "next": "Next",
+    "technicalFeaturesTitle": "Technical Features",
+    "technicalFeatures": {
+      "processor": "Intel Core i9 - 14th generation for exceptional performance",
+      "ram": "Expandable memory up to 96 GB RAM - Perfect for intensive computing and virtualization",
+      "storage": "Ultra-fast NVMe SSD - Storage from 500 GB to 4 TB depending on configuration",
+      "gpu": "Nvidia GeForce RTX 4060 - Powerful GPU for graphics rendering and complex calculations",
+      "dualOS": "Dual pre-installed OS - Kali Linux & Linux Mint for security and training",
+      "vpn": "Mullvad VPN included - 12 months of VPN service offered",
+      "encryption": "Full disk encryption - Complete protection against data breaches",
+      "webcam": "Built-in webcam cover - Physical privacy protection",
+      "bios": "BIOS password - Firmware-level security",
+      "bonus": "Included bonus: 2 64GB USB keys with pre-installed OS and 2-year warranty"
+    },
+    "cartTitle": "Cart",
+    "cartEmpty": "Your cart is empty",
+    "total": "Total",
+    "payStripe": "Pay with Stripe",
+    "payPaypal": "Pay with PayPal",
+    "payAffirm": "Pay with Affirm",
+    "productAdded": "Product added to cart! You can view it.",
+    "remove": "Remove"
+  },
+  "careers": {
+    "hero": {
+      "badge": "Global opportunities",
+      "title": "Careers at",
+      "company": "RoeCybersecurity",
+      "description": "Join our international team and contribute to digital security from anywhere in the world"
+    },
+    "benefits": {
+      "title": "International Benefits",
+      "subtitle": "Conditions designed for global work",
+      "items": [
+        {
+          "title": "Global Remote",
+          "description": "Work from anywhere in the world"
+        },
+        {
+          "title": "Total flexibility",
+          "description": "Hours adapted to your time zone"
+        },
+        {
+          "title": "Continuous training",
+          "description": "Training budget and international certifications"
+        },
+        {
+          "title": "Global team",
+          "description": "Collaboration with international experts"
+        }
+      ]
+    },
+    "jobs": {
+      "title": "Available Positions",
+      "subtitle": "Apply from anywhere in the world",
+      "remoteBadge": "Global Remote",
+      "experienceBadge": "Experience: {{experience}}",
+      "applyButton": "Apply",
+      "openings": [
+        {
+          "title": "Cybersecurity Instructor",
+          "department": "Training",
+          "type": "Full-time",
+          "description": "Teaching advanced cybersecurity concepts to diverse audiences",
+          "experience": "3+ years"
+        },
+        {
+          "title": "Senior Pentester",
+          "department": "Services",
+          "type": "Full-time",
+          "description": "Performing penetration testing and security audits",
+          "experience": "5+ years"
+        },
+        {
+          "title": "Fullstack Developer",
+          "department": "Technical",
+          "type": "Full-time",
+          "description": "Development of learning platforms and internal tools",
+          "experience": "2+ years"
+        }
+      ]
+    },
+    "spontaneous": {
+      "badge": "International Application",
+      "title": "Spontaneous Application",
+      "description": "Do you have unique skills? Apply even if no position exactly matches your profile.",
+      "button": "Apply now"
+    }
+  },
+  "apply": {
+    "hero": {
+      "badge": "Career at RoeCybersecurity",
+      "title": "Apply at",
+      "company": "RoeCybersecurity",
+      "description": "Join our team of experts and help secure the digital future"
+    },
+    "form": {
+      "labels": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "position": "Desired Position",
+        "resume": "Resume",
+        "message": "Message"
+      },
+      "placeholders": {
+        "firstName": "Your first name",
+        "lastName": "Your last name",
+        "email": "Your email",
+        "phone": "+1 555 000 0000",
+        "position": "Select a position",
+        "message": "Describe your motivation..."
+      },
+      "positions": [
+        { "value": "security-analyst", "label": "🔍 SOC Analyst" },
+        { "value": "pentester", "label": "🛡️ Senior Pentester" },
+        { "value": "instructor", "label": "🎓 Cybersecurity Trainer" },
+        { "value": "trainer", "label": "📚 IT / Tech Trainer" },
+        { "value": "backend-dev", "label": "⚙️ Back-End Developer" },
+        { "value": "frontend-dev", "label": "💻 Front-End Developer" },
+        { "value": "web-dev", "label": "🌐 Fullstack Web Developer" },
+        { "value": "dev-secops", "label": "🔒 DevSecOps Engineer" },
+        { "value": "compliance", "label": "📋 Compliance Consultant" },
+        { "value": "malware-analyst", "label": "🦠 Malware Analyst" },
+        { "value": "other", "label": "✨ Other positions" }
+      ],
+      "fileUpload": {
+        "selected": "📎 {{filename}}",
+        "requiredAlert": "Please add your resume",
+        "chooseFile": "Choose file",
+        "noFileSelected": "No file selected"
+      },
+      "submitButton": {
+        "text": "Submit my application",
+        "loading": "Sending..."
+      }
+    },
+    "status": {
+      "success": {
+        "title": "Application Sent!",
+        "message": "We have received your application. Our HR team will contact you within 48 business hours.",
+        "button": "Return to form"
+      },
+      "error": {
+        "message": "An error occurred. Please try again."
+      }
+    },
+    "backLink": "Back to job offers"
+  },
+
+  "contact": {
+    "hero": {
+      "title": "Let's Discuss Your Cybersecurity Project",
+      "subtitle": "Our team is available to answer all your questions"
+    },
+    "header": {
+      "contactInfo": "Our Contact Details",
+      "sendMessage": "Send Us a Message"
+    },
+    "methods": {
+      "phone": {
+        "label": "WhatsApp Phone",
+        "value": "+1 (912) 622-3901"
+      },
+      "email": {
+        "label": "Email",
+        "value": "roecybersec@gmail.com"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Virtual site – Headquarters in the United States"
+      },
+      "hours": {
+        "label": "Business Hours",
+        "value": "Mon–Fri: 9am–6pm EST | Sat: 10am–4pm EST"
+      }
+    },
+    "form": {
+      "fields": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Your message..."
+      },
+      "submitButton": "Send",
+      "privacyNotice": "🔒 Your data is protected under international regulations"
+    }
+  },
+  "courses": {
+    "hero": {
+      "badge": "Expert Training",
+      "title": "ROECybersecurity Courses",
+      "subtitle": "Courses tailored to all levels, from beginner to cybersecurity expert"
+    },
+    "filters": {
+      "label": "Filter by:",
+      "all": "All Courses",
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "courseBadge": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "courseActions": {
+      "start": "Start",
+      "register": "Register",
+      "premiumNotice": "Registration required to access premium content"
+    },
+    "courseMeta": {
+      "lessons": "lessons",
+      "duration": "hours"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "coursesList": [
+      {
+        "title": "Introduction to Cybersecurity",
+        "description": "Fundamentals of IT security for beginners.",
+        "lessons": "12 lessons",
+        "duration": "8 hours",
+        "level": "Beginner",
+        "price": "Free",
+        "action": "Start"
+      },
+      {
+        "title": "Networking Basics",
+        "description": "Understanding essential networks and protocols.",
+        "lessons": "8 lessons",
+        "duration": "6 hours",
+        "level": "Beginner",
+        "price": "Free",
+        "action": "Start"
+      },
+      {
+        "title": "Advanced Ethical Pentesting",
+        "description": "Advanced intrusion testing and auditing techniques.",
+        "lessons": "25 lessons",
+        "duration": "40 hours",
+        "level": "Advanced",
+        "price": "€199",
+        "action": "Register",
+        "premiumNotice": "Registration required to access premium content"
+      },
+      {
+        "title": "Enterprise Network Security",
+        "description": "Protecting enterprise network infrastructures.",
+        "lessons": "18 lessons",
+        "duration": "25 hours",
+        "level": "Intermediate",
+        "price": "€149",
+        "action": "Register",
+        "premiumNotice": "Registration required to access premium content"
+      }
+    ]
+  
+},
+
+  "register": {
+    "hero": {
+      "title": "Create your Roecybersecurity.com account",
+      "textBeforeLink": "By signing up, you agree to our",
+      "conditions": "Terms of Use",
+      "textMiddleLink": "and our",
+      "privacy": "Privacy Policy",
+      "textAfterLink": "."
+    },
+    "social": {
+      "title": "Sign up with",
+      "phone": "Phone number"
+    },
+    "form": {
+      "title": "Create an account with your email",
+      "name": "Full Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create my account",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login"
+    },
+    "alerts": {
+      "fillAll": "Please fill in all fields",
+      "passwordMismatch": "Passwords do not match"
+    }
+  },
+
+
+
+  "consultation": {
+    "header": {
+      "title": "📅 Personalized Consultation",
+      "subtitle": "Our experts guide you to define a tailored cybersecurity strategy aligned with your risks, goals, and industry."
+    },
+    "benefits": {
+      "riskAnalysis": {
+        "title": "Risk Analysis",
+        "description": "Identification of technical, human, and regulatory vulnerabilities to anticipate threats."
+      },
+      "concreteRecommendations": {
+        "title": "Concrete Recommendations",
+        "description": "Prioritized action plan adapted to your infrastructure, constraints, and business objectives."
+      },
+      "strategicSupport": {
+        "title": "Strategic Support",
+        "description": "Preparation for ISO 27001, GDPR, SOC 2 certification, or sector-specific compliance according to your needs."
+      }
+    },
+    "cta": {
+      "text": "Ready to secure your digital assets? Book your consultation now.",
+      "button": "Schedule My Consultation"
+    },
+    "info": {
+      "responseTitle": "Response within 24h",
+      "responseDesc": "Quick contact guaranteed for any request",
+      "freeTitle": "Free Consultation",
+      "freeDesc": "First session free with no commitment",
+      "certifiedTitle": "Certified Expertise",
+      "certifiedDesc": "Professionals with degrees and certifications"
+    }
+  },
+
+  "cyberSolutions": {
+    "hero": {
+      "title": "🔐 Our Cybersecurity Solutions",
+      "subtitle": "Strategic, certified services tailored to current threats."
+    },
+    "audit": {
+      "title": "Security Audit",
+      "desc": "80% of companies affected by breaches had not conducted a full audit. Our audits identify critical vulnerabilities before they are exploited."
+    },
+    "pentest": {
+      "title": "Penetration Testing",
+      "desc": "Over 493 million ransomware attacks were detected in 2022. Our pentests simulate these threats to strengthen your defenses."
+    },
+    "training": {
+      "title": "Training",
+      "desc": "20% of breaches are caused by human error. Our interactive sessions enhance your teams' skills to reduce this risk."
+    },
+    "certifications": {
+      "title": "Certifications",
+      "desc": "ISO 27001 certification is globally recognized. We guide you through ISO 27001, SOC 2, GDPR, and more."
+    },
+    "infrastructure": {
+      "title": "Infrastructure Security",
+      "desc": "Firewalls, VPNs, network segmentation, EDR — we protect your critical systems with robust and scalable solutions."
+    },
+    "monitoring": {
+      "title": "Monitoring & Response",
+      "desc": "24/7 monitoring, real-time detection, rapid intervention — our SOC continuously protects you from threats."
+    },
+    "access": {
+      "title": "Access Management",
+      "desc": "Strong authentication, MFA, IAM — we secure your identities and access to prevent intrusions."
+    },
+    "cta": {
+      "title": "📩 Need an audit or support?",
+      "subtitle": "Contact us for a free and confidential assessment.",
+      "button": "Request a Free Audit"
+    }
+  },
+
+  
+  "conditions": {
+    "title": "Terms of Use",
+    "sections": {
+      "objet": {
+        "title": "1. Purpose",
+        "content": "These terms of use govern access to and use of the RoeCybersecurity website, dedicated to cybersecurity, training, and the sale of specialized equipment. They define the rights and obligations of users."
+      },
+      "acces": {
+        "title": "2. Website Access",
+        "content": "Access to the website is free for viewing public content. Some services require prior registration or secure payment. Users agree to provide accurate and complete information during registration."
+      },
+      "propriete": {
+        "title": "3. Intellectual Property",
+        "content": "All content on the website (texts, images, logos, trademarks, software) is protected by copyright and intellectual property laws. Any unauthorized reproduction, representation, modification, or exploitation is strictly prohibited."
+      },
+      "responsabilites": {
+        "title": "4. Responsibilities",
+        "content": "RoeCybersecurity cannot be held responsible for direct or indirect damages resulting from misuse of the website, technical interruptions, or the use of provided information. Users are solely responsible for how they use the services."
+      },
+      "donnees": {
+        "title": "5. Personal Data",
+        "content": "In accordance with international data protection regulations, personal data collected is processed securely and confidentially. Users have the right to access, correct, and delete their data."
+      },
+      "modifications": {
+        "title": "6. Modifications",
+        "content": "These terms of use may be modified at any time depending on the evolution of the services offered. Users are encouraged to consult them regularly. Continued use of the website constitutes acceptance of the new terms."
+      },
+      "loi": {
+        "title": "7. Governing Law",
+        "content": "These terms of use are governed by applicable laws. In case of dispute, the competent courts will be those of the appropriate jurisdiction."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "content": "For any questions regarding these terms of use, you can contact us:",
+        "email": "roecybersec@gmail.com",
+        "phone": "+1 (912) 622-3901",
+        "phoneLink": "https://wa.me/19126223901",
+        "website": "https://3w.roecybersec.com"
+      }
+    },
+    "lastUpdate": "Last update"
+  },
+
+
+  "legal": {
+    "title": "Legal Notice",
+    "sections": {
+      "editeur": {
+        "title": "1. Site Publisher",
+        "content": "This site is published by RoeCybersecurity, a company specialized in cybersecurity, training, and IT security equipment. Website: 3w.roecybersec.com, Email: roecybersec@gmail.com, Phone: +1 (912) 622-3901, Headquarters: United States"
+      },
+      "responsables": {
+        "title": "2. Site Managers",
+        "content": "The persons responsible for the publication and management of the site are: Marate Daniel Agninde, Adzoavi Keli Akotia, Pachell K. Anthony, Cesar Koffi Lakignang"
+      },
+      "hebergement": {
+        "title": "3. Hosting",
+        "content": "The site is hosted by Hostinger International Ltd., whose headquarters are located at: Address: 61 Lordou Vironos Street, 6023 Larnaca, Cyprus, Phone: +370 645 03378, Email: support@hostinger.com"
+      },
+      "contact": {
+        "title": "4. Contact",
+        "content": "For any questions or complaints, you can contact us: Website: 3w.roecybersec.com, Email: roecybersec@gmail.com, WhatsApp Phone: +1 (912) 622-3901"
+      },
+      "propriete": {
+        "title": "5. Intellectual Property",
+        "content": "All content on this site (texts, images, graphics, logo, icons, sounds, software, etc.) is the exclusive property of RoeCybersecurity, unless otherwise stated. Any reproduction, representation, modification, publication, or adaptation of any part of the site's content is prohibited without prior written authorization."
+      },
+      "responsabilite": {
+        "title": "6. Limitation of Liability",
+        "content": "RoeCybersecurity shall not be held responsible for any direct or indirect damage to the user's equipment during site access, resulting either from using equipment that does not meet the specified requirements, or from the occurrence of a bug or incompatibility."
+      },
+      "protectionDonnees": {
+        "title": "7. Data Protection",
+        "content": "In accordance with data protection regulations, we are committed to safeguarding our users' privacy. For more information, please consult our Privacy Policy."
+      },
+      "litiges": {
+        "title": "8. Disputes",
+        "content": "These site terms are governed by applicable law, and any dispute or disagreement arising from the interpretation or execution of these terms will be subject to the competent jurisdiction."
+      }
+    },
+    "lastUpdate": "Last updated"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "sections": {
+      "responsable": {
+        "title": "1. Data Controller",
+        "content": "RoeCybersecurity is responsible for processing personal data collected through this website. We are committed to protecting and respecting your privacy in accordance with international data protection regulations. Website: 3w.roecybersec.com, Email: roecybersec@gmail.com, Phone: +1 (912) 622-3901, Headquarters: United States"
+      },
+      "donneesCollectees": {
+        "title": "2. Collected Data",
+        "content": "We collect the following data: First name, Last name, Email address (via contact forms), IP address, Browser type, Connection data, Cookies and similar technologies, Payment data (securely processed by Stripe/Affirm), Browsing information and preferences"
+      },
+      "finalites": {
+        "title": "3. Purpose of Processing",
+        "content": "The collected data is used to: Respond to your requests and questions, Manage orders, payments, and bookings, Improve site security and user experience, Send marketing communications (with your consent), Comply with our legal and regulatory obligations"
+      },
+      "basesLegales": {
+        "title": "4. Legal Basis for Processing",
+        "content": "The processing of your data is based on: your consent, the performance of a contract, a legal obligation, or our legitimate interest in improving our services."
+      },
+      "dureeConservation": {
+        "title": "5. Retention Period",
+        "content": "Your data is retained for as long as necessary to fulfill the purposes for which it was collected, in accordance with legal obligations. Payment data is retained according to regulatory requirements."
+      },
+      "partageDonnees": {
+        "title": "6. Data Sharing",
+        "content": "Your data may be shared with: our payment providers (Stripe, Affirm), our hosting providers, and competent authorities when required by law. We do not sell your data to third parties."
+      },
+      "vosDroits": {
+        "title": "7. Your Rights",
+        "content": "Under data protection regulations, you have the following rights: Right of access, Right to rectification, Right to erasure ('right to be forgotten'), Right to restrict processing, Right to data portability, Right to object. To exercise these rights, contact us at roecybersec@gmail.com"
+      },
+      "cookies": {
+        "title": "8. Cookies",
+        "content": "This site uses essential technical cookies for functionality, as well as analytical cookies to improve our services. You can configure your browser to refuse non-essential cookies."
+      },
+      "securite": {
+        "title": "9. Data Security",
+        "content": "We implement appropriate technical and organizational security measures to protect your data from unauthorized access, modification, disclosure, or destruction."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "content": "For any questions regarding this privacy policy or to exercise your rights, contact us at roecybersec@gmail.com or by phone: +1 (912) 622-3901"
+      }
+    },
+    "lastUpdate": "Last Update"
+  },
+
+
+  "hardware": {
+    "about": {
+      "hero": {
+        "title": "Discover ROE Cybersecurity",
+        "subtitle": "We protect your systems and data with a team of passionate and experienced experts."
+      },
+      "team": {
+        "badge": "Our Team",
+        "title": "Meet the Team",
+        "subtitle": "Meet the members of our ROE team, passionate about cybersecurity and technological innovation.",
+        "biography": "Biography",
+        "expertise": "Expertise",
+        "certifications": "Certifications",
+        "education": "Education",
+        "achievements": "Achievements",
+        "teamMembers": {
+          "marate": {
+            "name": "Marate Daniel Agninde",
+            "role": "CEO - ROE Cybersecurity",
+            "bio": "Founder and CEO of ROE Cybersecurity, former US military. Author of a book on cybersecurity and creator of ROE Laptop computers.",
+            "bioShort": "Founder & CEO of ROE Cybersecurity. Former US military, CompTIA Security+ & CySA+ certified. Author and creator of ROE Laptop computers.",
+            "expertise": ["Cybersecurity", "Military Leadership", "Hardware Development"],
+            "certifications": ["CompTIA Security+", "CompTIA CySA+"],
+            "education": ["Bachelor in CIS", "Master in Cybersecurity (ongoing)"],
+            "achievements": ["Author of a cybersecurity book", "Founder of ROE Laptop"]
+          },
+          "adzoavi": {
+            "name": "Adzoavi Keli Akotia",
+            "role": "CFO & CIO - ROE Cybersecurity",
+            "bio": "Financial strategist and tech innovator. Expert in finance and cybersecurity, passionate about coffee and travel.",
+            "bioShort": "CFO & CIO of ROE Cybersecurity. Finance & cybersecurity expert.",
+            "expertise": ["Financial Strategy", "Cybersecurity", "IT"],
+            "specialTraits": ["Coffee & tech", "Travel"]
+          },
+          "pachell": {
+            "name": "Pachell K. Anthony",
+            "role": "Operational Strategist & Trainer",
+            "bio": "Former US military, certified Security+, CySA+, Linux+, Splunk, AWS/Azure. Expert in Intelligence, Threat Analysis, Cloud and DevOps.",
+            "bioShort": "Operational strategist & trainer. Former US military, certified Security+, CySA+, Linux+, Splunk, AWS/Azure.",
+            "expertise": ["Cybersecurity", "Cloud & DevOps", "Training"],
+            "certifications": ["CompTIA Security+", "CySA+", "Linux+", "Splunk", "AWS/Azure"]
+          },
+          "cesar": {
+            "name": "César Koffi Lakignang",
+            "role": "Cybersecurity Specialist - ROE Cybersecurity",
+            "bio": "Former US military, cybersecurity graduate, specialized in network security, risk management and defense against cyber threats.",
+            "bioShort": "Cybersecurity expert, passionate about network defense and risk management. Military experience and recognized certifications.",
+            "expertise": ["Risk Management", "Network Security", "Leadership", "Security Auditing"],
+            "certifications": ["CompTIA A+ (ongoing)", "Network+ (ongoing)", "Security+ (ongoing)", "ISO 27001"],
+            "education": ["Bachelor in Cybersecurity", "ISO 27001 Training"]
+          }
+        }
+      }
+    }
+  },
+  "valuesSection": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "Military Heritage",
+        "description": "We combine discipline and security."
+      },
+      {
+        "title": "International",
+        "description": "Expertise and global solutions."
+      },
+      {
+        "title": "Support",
+        "description": "Training and guidance."
+      },
+      {
+        "title": "Security",
+        "description": "Protection of your digital assets."
+      }
+    ]
+  }
+}
+
+
+
+
