@@ -39,7 +39,7 @@ const getInitialLanguage = (): Language => {
 // Créer le contexte
 const LanguageContext = createContext<LanguageContextType>({
   language: 'FR',
-  changeLanguage: () => {}
+  changeLanguage: () => {},
 })
 
 export function LanguageProvider({ children }: LanguageProviderProps) {

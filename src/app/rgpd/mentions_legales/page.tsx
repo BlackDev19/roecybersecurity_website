@@ -8,36 +8,36 @@ export default function MentionsLegales() {
   const sections = [
     {
       title: t('legal.sections.editeur.title'),
-      content: t('legal.sections.editeur.content')
+      content: t('legal.sections.editeur.content'),
     },
     {
       title: t('legal.sections.responsables.title'),
-      content: t('legal.sections.responsables.content')
+      content: t('legal.sections.responsables.content'),
     },
     {
       title: t('legal.sections.hebergement.title'),
-      content: t('legal.sections.hebergement.content')
+      content: t('legal.sections.hebergement.content'),
     },
     {
       title: t('legal.sections.contact.title'),
-      content: t('legal.sections.contact.content')
+      content: t('legal.sections.contact.content'),
     },
     {
       title: t('legal.sections.propriete.title'),
-      content: t('legal.sections.propriete.content')
+      content: t('legal.sections.propriete.content'),
     },
     {
       title: t('legal.sections.responsabilite.title'),
-      content: t('legal.sections.responsabilite.content')
+      content: t('legal.sections.responsabilite.content'),
     },
     {
       title: t('legal.sections.protectionDonnees.title'),
-      content: t('legal.sections.protectionDonnees.content')
+      content: t('legal.sections.protectionDonnees.content'),
     },
     {
       title: t('legal.sections.litiges.title'),
-      content: t('legal.sections.litiges.content')
-    }
+      content: t('legal.sections.litiges.content'),
+    },
   ]
 
   return (
@@ -55,10 +55,11 @@ export default function MentionsLegales() {
 
       <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
         <p className="text-center text-blue-800 font-medium">
-          {t('legal.lastUpdate')} : {new Date().toLocaleDateString('fr-FR', {
+          {t('legal.lastUpdate')} :{' '}
+          {new Date().toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
           })}
         </p>
       </div>

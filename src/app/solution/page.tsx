@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import {
   ShieldCheck,
   Eye,
@@ -10,14 +10,14 @@ import {
   AlertCircle,
   LockKeyhole,
   LucideIcon,
-} from 'lucide-react';
-import { useTranslation } from '@/hooks/useTranslation';
+} from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 type Solution = {
-  icon: LucideIcon;
-  key: string; // clé correspondant au JSON de traduction
-  gradient: string;
-};
+  icon: LucideIcon
+  key: string // clé correspondant au JSON de traduction
+  gradient: string
+}
 
 const cyberSolutionsList: Solution[] = [
   { icon: ShieldCheck, key: 'audit', gradient: 'from-slate-700 to-slate-900' },
@@ -27,10 +27,10 @@ const cyberSolutionsList: Solution[] = [
   { icon: Server, key: 'infrastructure', gradient: 'from-blue-700 to-cyan-800' },
   { icon: AlertCircle, key: 'monitoring', gradient: 'from-red-700 to-pink-700' },
   { icon: LockKeyhole, key: 'access', gradient: 'from-purple-700 to-violet-800' },
-];
+]
 
 export default function CyberSolutionsGrid() {
-  const { t } = useTranslation(); // si tu utilises un hook de traduction
+  const { t } = useTranslation() // si tu utilises un hook de traduction
 
   return (
     <section className="py-20 bg-gray-950 text-white">
@@ -48,7 +48,7 @@ export default function CyberSolutionsGrid() {
         {/* Grid des solutions */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cyberSolutionsList.map((solution, index) => {
-            const Icon = solution.icon;
+            const Icon = solution.icon
             return (
               <motion.div
                 key={solution.key}
@@ -68,7 +68,7 @@ export default function CyberSolutionsGrid() {
                   {t(`cyberSolutions.${solution.key}.desc`)}
                 </p>
               </motion.div>
-            );
+            )
           })}
         </div>
 
@@ -80,12 +80,8 @@ export default function CyberSolutionsGrid() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">
-            {t('cyberSolutions.cta.title')}
-          </h3>
-          <p className="text-gray-400 mb-6">
-            {t('cyberSolutions.cta.subtitle')}
-          </p>
+          <h3 className="text-2xl font-bold mb-4">{t('cyberSolutions.cta.title')}</h3>
+          <p className="text-gray-400 mb-6">{t('cyberSolutions.cta.subtitle')}</p>
           <a
             href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition shadow-lg hover:shadow-xl"
@@ -96,5 +92,5 @@ export default function CyberSolutionsGrid() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

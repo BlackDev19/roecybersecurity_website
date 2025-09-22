@@ -36,7 +36,9 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
       {/* Texte explicatif */}
       <div className="text-center px-6 py-10 md:py-16 max-w-3xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-4">{t('register.hero.title')}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-4">
+          {t('register.hero.title')}
+        </h1>
         <p className="text-gray-300 text-lg md:text-xl">
           {t('register.hero.textBeforeLink')}{' '}
           <Link href="/rgpd/conditions" className="text-blue-300 underline hover:text-blue-200">

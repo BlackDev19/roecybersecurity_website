@@ -1,10 +1,12 @@
 # Copilot Instructions for ROE Cybersecurity Website
 
 ## Project Overview
+
 - This is a Next.js 13+ app using the `/app` directory structure, TypeScript, Tailwind CSS, and Framer Motion for UI/animation.
 - The project is designed for a modern, professional cybersecurity website with multi-language support and custom UI components.
 
 ## Key Architecture & Patterns
+
 - **Pages & Routing:**
   - Main pages are in `src/app/` (e.g., `page.tsx`, `about/page.tsx`, `auth/register/page.tsx`).
   - Nested routes for features (e.g., `auth/register`, `careers/apply`, `shop/roe-laptop`).
@@ -24,6 +26,7 @@
   - SVGs and PDFs in `public/`.
 
 ## Developer Workflows
+
 - **Start Dev Server:**
   - `npm run dev` (or `yarn dev`) launches at `http://localhost:3000`.
 - **Build for Production:**
@@ -36,6 +39,7 @@
   - Framer Motion for animation, Lucide React for icons, React Hook Form + Yup for forms, `@tailwindcss/typography` for rich text.
 
 ## Project-Specific Conventions
+
 - Use `font-sans` and custom text classes for all major headings and body text.
 - Use context/hooks for language switching and translation.
 - Prefer motion components for animated UI sections.
@@ -44,14 +48,17 @@
 - All forms use React Hook Form and Yup for validation.
 
 ## Examples
+
 - To add a new page: create `src/app/newpage/page.tsx` and use Tailwind + custom classes.
 - To add a new language: update `src/locales/` and context/hook logic.
 - To add a new UI component: place in `src/components/`, use Tailwind and Framer Motion as needed.
 
 ## References
+
 - See `README.md` for basic setup and Next.js links.
 - See `tailwind.config.mjs` and `src/styles/typography.css` for design system.
 - See `src/components/Header.tsx` for advanced UI and language selector patterns.
 
 ---
+
 _If any conventions or workflows are unclear, please ask for clarification or examples from the codebase._

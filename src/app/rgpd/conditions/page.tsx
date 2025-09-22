@@ -6,14 +6,35 @@ export default function ConditionsUtilisation() {
   const { t } = useTranslation()
 
   const sections = [
-    { title: t('conditions.sections.objet.title'), content: t('conditions.sections.objet.content') },
-    { title: t('conditions.sections.acces.title'), content: t('conditions.sections.acces.content') },
-    { title: t('conditions.sections.propriete.title'), content: t('conditions.sections.propriete.content') },
-    { title: t('conditions.sections.responsabilites.title'), content: t('conditions.sections.responsabilites.content') },
-    { title: t('conditions.sections.donnees.title'), content: t('conditions.sections.donnees.content') },
-    { title: t('conditions.sections.modifications.title'), content: t('conditions.sections.modifications.content') },
+    {
+      title: t('conditions.sections.objet.title'),
+      content: t('conditions.sections.objet.content'),
+    },
+    {
+      title: t('conditions.sections.acces.title'),
+      content: t('conditions.sections.acces.content'),
+    },
+    {
+      title: t('conditions.sections.propriete.title'),
+      content: t('conditions.sections.propriete.content'),
+    },
+    {
+      title: t('conditions.sections.responsabilites.title'),
+      content: t('conditions.sections.responsabilites.content'),
+    },
+    {
+      title: t('conditions.sections.donnees.title'),
+      content: t('conditions.sections.donnees.content'),
+    },
+    {
+      title: t('conditions.sections.modifications.title'),
+      content: t('conditions.sections.modifications.content'),
+    },
     { title: t('conditions.sections.loi.title'), content: t('conditions.sections.loi.content') },
-    { title: t('conditions.sections.contact.title'), content: t('conditions.sections.contact.content') },
+    {
+      title: t('conditions.sections.contact.title'),
+      content: t('conditions.sections.contact.content'),
+    },
   ]
 
   return (
@@ -30,8 +51,12 @@ export default function ConditionsUtilisation() {
 
         {/* Section Contact */}
         <div className="bg-white p-6 rounded-lg border border-blue-200 shadow-sm">
-          <h2 className="text-xl font-semibold text-blue-800 mb-3">{t('conditions.sections.contact.title')}</h2>
-          <p className="text-gray-700 leading-relaxed">{t('conditions.sections.contact.content')}</p>
+          <h2 className="text-xl font-semibold text-blue-800 mb-3">
+            {t('conditions.sections.contact.title')}
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            {t('conditions.sections.contact.content')}
+          </p>
           <p className="text-gray-700 mt-2">
             <strong>Email :</strong>{' '}
             <a
@@ -66,7 +91,12 @@ export default function ConditionsUtilisation() {
 
       <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
         <p className="text-center text-blue-800 font-medium">
-          {t('conditions.lastUpdate')} : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+          {t('conditions.lastUpdate')} :{' '}
+          {new Date().toLocaleDateString('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
         </p>
       </div>
     </main>

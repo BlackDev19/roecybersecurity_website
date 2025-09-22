@@ -3,9 +3,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 
 // Créer le contexte avec une valeur par défaut typée
-const LanguageContext = createContext({ 
-  language: 'FR', 
-  changeLanguage: () => {} 
+const LanguageContext = createContext({
+  language: 'FR',
+  changeLanguage: () => {},
 })
 
 export function LanguageProvider({ children }) {

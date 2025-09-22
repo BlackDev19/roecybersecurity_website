@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { CalendarDays, ShieldCheck, MessageSquare, Clock, Gift, Award } from 'lucide-react';
-import { useTranslation } from '@/hooks/useTranslation';
+import { motion } from 'framer-motion'
+import { CalendarDays, ShieldCheck, MessageSquare, Clock, Gift, Award } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 const benefits = [
   {
@@ -20,10 +20,10 @@ const benefits = [
     titleKey: 'consultation.benefits.strategicSupport.title',
     descriptionKey: 'consultation.benefits.strategicSupport.description',
   },
-];
+]
 
 export default function ConsultationPage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <section className="bg-gray-900 text-white py-20 px-6">
@@ -57,7 +57,7 @@ export default function ConsultationPage() {
         {/* Avantages */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
           {benefits.map((item, index) => {
-            const Icon = item.icon;
+            const Icon = item.icon
             return (
               <motion.div
                 key={index}
@@ -73,7 +73,7 @@ export default function ConsultationPage() {
                 </div>
                 <p className="text-gray-300 text-sm">{t(item.descriptionKey)}</p>
               </motion.div>
-            );
+            )
           })}
         </div>
 
@@ -84,9 +84,7 @@ export default function ConsultationPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-gray-300 mb-8 text-base font-medium">
-            {t('consultation.cta.text')}
-          </p>
+          <p className="text-gray-300 mb-8 text-base font-medium">{t('consultation.cta.text')}</p>
 
           <a
             href="/contact"
@@ -102,22 +100,28 @@ export default function ConsultationPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
             <div className="bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 text-center">
               <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
-              <h3 className="font-semibold text-white text-sm mb-1">{t('consultation.info.responseTitle')}</h3>
+              <h3 className="font-semibold text-white text-sm mb-1">
+                {t('consultation.info.responseTitle')}
+              </h3>
               <p className="text-gray-300 text-xs">{t('consultation.info.responseDesc')}</p>
             </div>
             <div className="bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 text-center">
               <Gift className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-              <h3 className="font-semibold text-white text-sm mb-1">{t('consultation.info.freeTitle')}</h3>
+              <h3 className="font-semibold text-white text-sm mb-1">
+                {t('consultation.info.freeTitle')}
+              </h3>
               <p className="text-gray-300 text-xs">{t('consultation.info.freeDesc')}</p>
             </div>
             <div className="bg-gray-800/70 backdrop-blur-sm rounded-xl p-5 text-center">
               <Award className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-              <h3 className="font-semibold text-white text-sm mb-1">{t('consultation.info.certifiedTitle')}</h3>
+              <h3 className="font-semibold text-white text-sm mb-1">
+                {t('consultation.info.certifiedTitle')}
+              </h3>
               <p className="text-gray-300 text-xs">{t('consultation.info.certifiedDesc')}</p>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

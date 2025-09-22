@@ -77,7 +77,7 @@ function getTranslationValue(
 export const useTranslation = () => {
   const { language } = useLanguage()
   // Normalisation de la casse pour supporter 'fr', 'en', 'FR', 'EN'
-  const currentLanguage = ((language || defaultLanguage).toUpperCase()) as Language
+  const currentLanguage = (language || defaultLanguage).toUpperCase() as Language
 
   // 🔸 Renvoie toujours une string
   const t = (key: string, options: TranslationOptions = {}): string => {
@@ -112,3 +112,5 @@ export const useTranslation = () => {
 
   return { t, tObject, language: currentLanguage }
 }
+// Ajoute à la fin du fichier
+export type { TranslationOptions, TranslationType, TranslationObject }

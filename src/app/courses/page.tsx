@@ -43,14 +43,16 @@ export default function CoursesPage() {
   // Stats
   const stats = {
     total: courses.length,
-    free: courses.filter(c => c.price === badgeFree).length,
-    premium: courses.filter(c => c.price !== badgeFree).length,
+    free: courses.filter((c) => c.price === badgeFree).length,
+    premium: courses.filter((c) => c.price !== badgeFree).length,
   }
 
   const filteredCourses =
     activeFilter === 'all'
       ? courses
-      : courses.filter(c => (activeFilter === 'free' ? c.price === badgeFree : c.price !== badgeFree))
+      : courses.filter((c) =>
+          activeFilter === 'free' ? c.price === badgeFree : c.price !== badgeFree
+        )
 
   // Niveaux traduits
   const lvlBeginner = t('courses.levels.beginner')
@@ -94,7 +96,7 @@ export default function CoursesPage() {
             { key: 'all', label: labelAll, count: stats.total },
             { key: 'free', label: labelFree, count: stats.free },
             { key: 'premium', label: labelPremium, count: stats.premium },
-          ].map(filter => (
+          ].map((filter) => (
             <button
               key={filter.key}
               onClick={() => setActiveFilter(filter.key as 'all' | 'free' | 'premium')}
@@ -124,11 +126,16 @@ export default function CoursesPage() {
                   : '/auth/register'
 
                 return (
-                  <div key={idx} className="bg-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+                  <div
+                    key={idx}
+                    className="bg-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:scale-105 transition-transform duration-300"
+                  >
                     {/* Badge */}
                     <div
                       className={`px-3 py-2 rounded-xl border font-medium text-sm ${
-                        isPremium ? 'bg-purple-600/20 text-purple-300 border-purple-500/30' : 'bg-green-600/20 text-green-300 border-green-500/30'
+                        isPremium
+                          ? 'bg-purple-600/20 text-purple-300 border-purple-500/30'
+                          : 'bg-green-600/20 text-green-300 border-green-500/30'
                       }`}
                     >
                       {isPremium ? badgePremium : badgeFree}
@@ -150,17 +157,25 @@ export default function CoursesPage() {
                       </span>
                     </div>
 
-                    <div className={`mt-2 px-3 py-1 rounded-xl border font-medium text-sm ${getLevelStyle(course.level)}`}>
+                    <div
+                      className={`mt-2 px-3 py-1 rounded-xl border font-medium text-sm ${getLevelStyle(course.level)}`}
+                    >
                       {course.level}
                     </div>
 
                     <div className="flex justify-between items-center mt-4">
-                      <div className={`text-2xl font-bold ${isPremium ? 'text-purple-400' : 'text-green-400'}`}>{course.price}</div>
+                      <div
+                        className={`text-2xl font-bold ${isPremium ? 'text-purple-400' : 'text-green-400'}`}
+                      >
+                        {course.price}
+                      </div>
 
                       <Link
                         href={targetHref}
                         className={`px-6 py-2 rounded-xl font-semibold text-white bg-gradient-to-r ${
-                          isPremium ? 'from-purple-500 to-pink-500' : 'from-green-500 to-emerald-500'
+                          isPremium
+                            ? 'from-purple-500 to-pink-500'
+                            : 'from-green-500 to-emerald-500'
                         } hover:scale-105 transition-transform duration-300`}
                       >
                         {course.action} <ChevronRight className="h-4 w-4 inline-block" />

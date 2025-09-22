@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // ⬅️ Crucial pour générer un site statique
+  images: {
+    unoptimized: true, // ⬅️ Évite les erreurs liées à l’optimisation d’image côté serveur
+  },
+  reactStrictMode: true,
+  trailingSlash: true, // ⬅️ Ajoute un slash à la fin des URLs (utile pour Hostinger)
   turbopack: {
-    // Spécifie explicitement le répertoire racine
-    root: __dirname,
+    root: __dirname, // ⬅️ Optionnel, utile en dev local
   },
 }
 

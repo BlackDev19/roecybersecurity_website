@@ -3,7 +3,7 @@ import withNextIntl from 'next-intl/plugin'
 
 const config: NextConfig = {
   reactStrictMode: true, // Bonne pratique
-  swcMinify: true,       // Optimisation du build
+  swcMinify: true, // Optimisation du build
 }
 
 // ⚡ On applique directement le plugin next-intl

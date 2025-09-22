@@ -6,16 +6,40 @@ export default function PolitiqueConfidentialite() {
   const { t } = useTranslation()
 
   const sections = [
-    { title: t('privacy.sections.responsable.title'), content: t('privacy.sections.responsable.content') },
-    { title: t('privacy.sections.donneesCollectees.title'), content: t('privacy.sections.donneesCollectees.content') },
-    { title: t('privacy.sections.finalites.title'), content: t('privacy.sections.finalites.content') },
-    { title: t('privacy.sections.basesLegales.title'), content: t('privacy.sections.basesLegales.content') },
-    { title: t('privacy.sections.dureeConservation.title'), content: t('privacy.sections.dureeConservation.content') },
-    { title: t('privacy.sections.partageDonnees.title'), content: t('privacy.sections.partageDonnees.content') },
-    { title: t('privacy.sections.vosDroits.title'), content: t('privacy.sections.vosDroits.content') },
+    {
+      title: t('privacy.sections.responsable.title'),
+      content: t('privacy.sections.responsable.content'),
+    },
+    {
+      title: t('privacy.sections.donneesCollectees.title'),
+      content: t('privacy.sections.donneesCollectees.content'),
+    },
+    {
+      title: t('privacy.sections.finalites.title'),
+      content: t('privacy.sections.finalites.content'),
+    },
+    {
+      title: t('privacy.sections.basesLegales.title'),
+      content: t('privacy.sections.basesLegales.content'),
+    },
+    {
+      title: t('privacy.sections.dureeConservation.title'),
+      content: t('privacy.sections.dureeConservation.content'),
+    },
+    {
+      title: t('privacy.sections.partageDonnees.title'),
+      content: t('privacy.sections.partageDonnees.content'),
+    },
+    {
+      title: t('privacy.sections.vosDroits.title'),
+      content: t('privacy.sections.vosDroits.content'),
+    },
     { title: t('privacy.sections.cookies.title'), content: t('privacy.sections.cookies.content') },
-    { title: t('privacy.sections.securite.title'), content: t('privacy.sections.securite.content') },
-    { title: t('privacy.sections.contact.title'), content: t('privacy.sections.contact.content') }
+    {
+      title: t('privacy.sections.securite.title'),
+      content: t('privacy.sections.securite.content'),
+    },
+    { title: t('privacy.sections.contact.title'), content: t('privacy.sections.contact.content') },
   ]
 
   return (
@@ -33,10 +57,11 @@ export default function PolitiqueConfidentialite() {
 
       <div className="mt-12 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
         <p className="text-center text-blue-800 font-medium">
-          {t('privacy.lastUpdate')} : {new Date().toLocaleDateString('fr-FR', {
+          {t('privacy.lastUpdate')} :{' '}
+          {new Date().toLocaleDateString('fr-FR', {
             year: 'numeric',
             month: 'long',
-            day: 'numeric'
+            day: 'numeric',
           })}
         </p>
       </div>
