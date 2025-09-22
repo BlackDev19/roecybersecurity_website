@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${Buffer.from(
+        Authorization: `Basic ${Buffer.from(
           `${process.env.AFFIRM_PUBLIC_API_KEY}:${process.env.AFFIRM_PRIVATE_API_KEY}`
         ).toString('base64')}`,
       },
@@ -30,24 +30,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Capturer immédiatement le paiement
-    const captureResponse = await fetch(`${process.env.AFFIRM_API_URL}/charges/${chargeData.id}/capture`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Basic ${Buffer.from(
-          `${process.env.AFFIRM_PUBLIC_API_KEY}:${process.env.AFFIRM_PRIVATE_API_KEY}`
-        ).toString('base64')}`,
-      },
-    })
+    const captureResponse = await fetch(
+      `${process.env.AFFIRM_API_URL}/charges/${chargeData.id}/capture`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${Buffer.from(
+            `${process.env.AFFIRM_PUBLIC_API_KEY}:${process.env.AFFIRM_PRIVATE_API_KEY}`
+          ).toString('base64')}`,
+        },
+      }
+    )
 
     const captureData = await captureResponse.json()
 
     // Ici, vous pouvez sauvegarder la commande en base de données
     // await saveOrder({ customer, cart, payment: captureData })
 
-    res.status(200).json({ 
-      success: true, 
+    res.status(200).json({
+      success: true,
       chargeId: captureData.id,
-      amount: captureData.amount 
+      amount: captureData.amount,
     })
   } catch (error) {
     console.error('Erreur Affirm:', error)

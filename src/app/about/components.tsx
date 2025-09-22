@@ -14,12 +14,7 @@ import {
 
 import { useTranslation } from '../../hooks/useTranslation'
 import { createAnimationVariants } from './animations'
-import type { 
-  BadgeProps, 
-  BadgeListProps, 
-  DotListProps, 
-  TeamMemberCardProps 
-} from './types'
+import type { BadgeProps, BadgeListProps, DotListProps, TeamMemberCardProps } from './types'
 import { SHARED_CLASSES, BADGE_STYLES } from './types'
 
 // ================== COMPONENTS ==================

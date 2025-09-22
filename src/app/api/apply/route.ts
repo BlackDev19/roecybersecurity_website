@@ -60,10 +60,9 @@ export async function POST(req: Request): Promise<Response> {
       }
 
       if (resumeFile.size > 5 * 1024 * 1024) {
-        return new Response(
-          JSON.stringify({ success: false, error: 'Le fichier dépasse 5MB.' }),
-          { status: 400 }
-        )
+        return new Response(JSON.stringify({ success: false, error: 'Le fichier dépasse 5MB.' }), {
+          status: 400,
+        })
       }
 
       const buffer = Buffer.from(await resumeFile.arrayBuffer())

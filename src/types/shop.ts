@@ -56,7 +56,7 @@ export interface Order {
 }
 
 // Statuts de commande
-export type OrderStatus = 
+export type OrderStatus =
   | 'pending'
   | 'confirmed'
   | 'processing'
@@ -67,7 +67,7 @@ export type OrderStatus =
   | 'cancelled'
 
 // Statuts de paiement
-export type PaymentStatus = 
+export type PaymentStatus =
   | 'pending'
   | 'processing'
   | 'completed'
@@ -93,7 +93,7 @@ export interface Component {
 }
 
 // Types de composants
-export type ComponentType = 
+export type ComponentType =
   | 'cpu'
   | 'gpu'
   | 'ram'

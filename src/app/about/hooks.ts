@@ -3,11 +3,7 @@ import { Shield, Globe, GraduationCap, Lock } from 'lucide-react'
 
 // Types de ton projet
 import type { TeamMember, Value, TranslationObject } from './types'
-import type {
-  TranslationOptions,
-  TranslationType,
-} from '../../hooks/useTranslation'
-
+import type { TranslationOptions, TranslationType } from '../../hooks/useTranslation'
 
 // ================== TYPES UTILES ==================
 type TFunction = (key: string, options?: TranslationOptions) => string
@@ -27,9 +23,7 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         role: t('hardware.about.team.teamMembers.marate.role'),
         bio: t('hardware.about.team.teamMembers.marate.bio'),
         bioShort: t('hardware.about.team.teamMembers.marate.bioShort'),
-        expertise: Array.isArray(
-          tObject('hardware.about.team.teamMembers.marate.expertise')
-        )
+        expertise: Array.isArray(tObject('hardware.about.team.teamMembers.marate.expertise'))
           ? (tObject('hardware.about.team.teamMembers.marate.expertise') as string[])
           : [],
         certifications: Array.isArray(
@@ -37,14 +31,10 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         )
           ? (tObject('hardware.about.team.teamMembers.marate.certifications') as string[])
           : [],
-        education: Array.isArray(
-          tObject('hardware.about.team.teamMembers.marate.education')
-        )
+        education: Array.isArray(tObject('hardware.about.team.teamMembers.marate.education'))
           ? (tObject('hardware.about.team.teamMembers.marate.education') as string[])
           : [],
-        achievements: Array.isArray(
-          tObject('hardware.about.team.teamMembers.marate.achievements')
-        )
+        achievements: Array.isArray(tObject('hardware.about.team.teamMembers.marate.achievements'))
           ? (tObject('hardware.about.team.teamMembers.marate.achievements') as string[])
           : [],
         image: 'marate-agninde.jpg',
@@ -55,9 +45,7 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         role: t('hardware.about.team.teamMembers.adzoavi.role'),
         bio: t('hardware.about.team.teamMembers.adzoavi.bio'),
         bioShort: t('hardware.about.team.teamMembers.adzoavi.bioShort'),
-        expertise: Array.isArray(
-          tObject('hardware.about.team.teamMembers.adzoavi.expertise')
-        )
+        expertise: Array.isArray(tObject('hardware.about.team.teamMembers.adzoavi.expertise'))
           ? (tObject('hardware.about.team.teamMembers.adzoavi.expertise') as string[])
           : [],
         specialTraits: Array.isArray(
@@ -73,9 +61,7 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         role: t('hardware.about.team.teamMembers.pachell.role'),
         bio: t('hardware.about.team.teamMembers.pachell.bio'),
         bioShort: t('hardware.about.team.teamMembers.pachell.bioShort'),
-        expertise: Array.isArray(
-          tObject('hardware.about.team.teamMembers.pachell.expertise')
-        )
+        expertise: Array.isArray(tObject('hardware.about.team.teamMembers.pachell.expertise'))
           ? (tObject('hardware.about.team.teamMembers.pachell.expertise') as string[])
           : [],
         certifications: Array.isArray(
@@ -83,14 +69,10 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         )
           ? (tObject('hardware.about.team.teamMembers.pachell.certifications') as string[])
           : [],
-        education: Array.isArray(
-          tObject('hardware.about.team.teamMembers.pachell.education')
-        )
+        education: Array.isArray(tObject('hardware.about.team.teamMembers.pachell.education'))
           ? (tObject('hardware.about.team.teamMembers.pachell.education') as string[])
           : [],
-        achievements: Array.isArray(
-          tObject('hardware.about.team.teamMembers.pachell.achievements')
-        )
+        achievements: Array.isArray(tObject('hardware.about.team.teamMembers.pachell.achievements'))
           ? (tObject('hardware.about.team.teamMembers.pachell.achievements') as string[])
           : [],
         image: 'pachell-anthony.jpg',
@@ -101,9 +83,7 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         role: t('hardware.about.team.teamMembers.cesar.role'),
         bio: t('hardware.about.team.teamMembers.cesar.bio'),
         bioShort: t('hardware.about.team.teamMembers.cesar.bioShort'),
-        expertise: Array.isArray(
-          tObject('hardware.about.team.teamMembers.cesar.expertise')
-        )
+        expertise: Array.isArray(tObject('hardware.about.team.teamMembers.cesar.expertise'))
           ? (tObject('hardware.about.team.teamMembers.cesar.expertise') as string[])
           : [],
         certifications: Array.isArray(
@@ -111,14 +91,10 @@ export const useTeamData = (t: TFunction, tObject: TObjectFunction): TeamMember[
         )
           ? (tObject('hardware.about.team.teamMembers.cesar.certifications') as string[])
           : [],
-        education: Array.isArray(
-          tObject('hardware.about.team.teamMembers.cesar.education')
-        )
+        education: Array.isArray(tObject('hardware.about.team.teamMembers.cesar.education'))
           ? (tObject('hardware.about.team.teamMembers.cesar.education') as string[])
           : [],
-        achievements: Array.isArray(
-          tObject('hardware.about.team.teamMembers.cesar.achievements')
-        )
+        achievements: Array.isArray(tObject('hardware.about.team.teamMembers.cesar.achievements'))
           ? (tObject('hardware.about.team.teamMembers.cesar.achievements') as string[])
           : [],
         image: 'cesar-lakignang.jpg',

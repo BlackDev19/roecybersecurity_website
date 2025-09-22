@@ -25,7 +25,7 @@ import type {
   AffirmError,
   AffirmCheckoutData,
   AffirmCallbacks,
-  WindowWithAffirm
+  WindowWithAffirm,
 } from '@/types/affirm'
 
 // =====================
@@ -332,13 +332,15 @@ export default function RoeLaptopPage() {
     // Utilisation du hook usePayment si disponible
     try {
       // Import dynamique du hook usePayment
-      import('@/hooks/usePayment').then(({ usePayment }) => {
-        // Ici vous pouvez utiliser le hook usePayment
-        console.log('Hook usePayment disponible')
-      }).catch(() => {
-        // Fallback vers l'implémentation directe
-        directAffirmCheckout(cart)
-      })
+      import('@/hooks/usePayment')
+        .then(({ usePayment }) => {
+          // Ici vous pouvez utiliser le hook usePayment
+          console.log('Hook usePayment disponible')
+        })
+        .catch(() => {
+          // Fallback vers l'implémentation directe
+          directAffirmCheckout(cart)
+        })
     } catch (error) {
       // Fallback vers l'implémentation directe
       directAffirmCheckout(cart)
@@ -353,7 +355,7 @@ export default function RoeLaptopPage() {
       unit_price: item.price * 100, // Affirm attend le prix en centimes
       qty: 1,
       item_url: window.location.href,
-      item_image_url: `${window.location.origin}/images/laptop/laptop_1.png`
+      item_image_url: `${window.location.origin}/images/laptop/laptop_1.png`,
     }))
 
     const totalAmount = cart.reduce((acc, item) => acc + item.price, 0)
@@ -364,20 +366,20 @@ export default function RoeLaptopPage() {
         public_api_key: process.env.NEXT_PUBLIC_AFFIRM_PUBLIC_KEY,
         user_confirmation_url: `${window.location.origin}/checkout/confirmation`,
         user_cancel_url: `${window.location.origin}/checkout/cancel`,
-        user_confirmation_url_action: 'POST'
+        user_confirmation_url_action: 'POST',
       },
       items,
       // Structure shipping compatible avec usePayment.ts
       shipping: {
         name: {
-          full: 'Client ROE'
+          full: 'Client ROE',
         },
-        email: 'client@roe-cybersecurity.com'
+        email: 'client@roe-cybersecurity.com',
       },
       total: totalAmount * 100, // En centimes
       order_id: `roe_order_${Date.now()}`,
       shipping_amount: 0,
-      tax_amount: 0
+      tax_amount: 0,
     }
 
     // Callbacks pour le succès et l'échec
@@ -393,7 +395,7 @@ export default function RoeLaptopPage() {
             },
             body: JSON.stringify({
               checkout_token: checkoutToken,
-              cart: cart
+              cart: cart,
             }),
           })
 
@@ -413,7 +415,7 @@ export default function RoeLaptopPage() {
         console.error('Erreur Affirm:', error)
         const errorMessage = error?.message || 'Erreur inconnue'
         alert(`Erreur lors du paiement: ${errorMessage}`)
-      }
+      },
     }
 
     // Vérification et utilisation de l'API Affirm avec types corrects
@@ -432,10 +434,12 @@ export default function RoeLaptopPage() {
         } else {
           // Méthode alternative
           console.log('API Affirm non disponible - redirection manuelle')
-          alert('Le service de paiement Affirm sera bientôt disponible. Veuillez utiliser WhatsApp pour le moment.')
+          alert(
+            'Le service de paiement Affirm sera bientôt disponible. Veuillez utiliser WhatsApp pour le moment.'
+          )
         }
       } catch (error) {
-        console.error('Erreur lors de l\'initialisation d\'Affirm:', error)
+        console.error("Erreur lors de l'initialisation d'Affirm:", error)
         alert("Une erreur est survenue lors de l'initialisation du paiement.")
       }
     } else {

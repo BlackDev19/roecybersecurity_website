@@ -123,7 +123,6 @@
     "developed": "Développé selon les normes RGPD"
   },
 
-
   "shop": {
     "title": "Ordinateur Portable ROE Cybersecurity",
     "purpose": "Conçu pour les hackers éthiques, les étudiants en informatique et les entreprises exigeant performance et sécurité.",
@@ -184,8 +183,8 @@
       "bios": "BIOS - Mot de passe BIOS pour la sécurité du firmware",
       "bonus": "Bonus - 2 clés USB 64 Go avec OS préinstallé et garantie de 2 ans"
     },
-"whatsappMessage": {
-  "title": "📋 DEMANDE DE DEVIS - ROE COMPUTERS",
+    "whatsappMessage": {
+      "title": "📋 DEMANDE DE DEVIS - ROE COMPUTERS",
       "greeting": "Bonjour,",
       "orderIntro": "Je souhaite obtenir un devis pour la configuration suivante :",
       "orderedFeatures": "💻 Spécifications techniques :",
@@ -199,8 +198,7 @@
       "confirmOrder": "✅ Cette configuration m'intéresse",
       "contact": "📞 Merci de me contacter pour discuter des modalités de commande et de livraison.",
       "closing": "Cordialement"
-}
-
+    }
   },
   "careers": {
     "hero": {

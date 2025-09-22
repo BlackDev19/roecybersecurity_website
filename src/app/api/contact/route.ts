@@ -30,13 +30,9 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    const errorMessage =
-      err instanceof Error ? err.message : 'Erreur serveur inconnue'
+    const errorMessage = err instanceof Error ? err.message : 'Erreur serveur inconnue'
     console.error('Erreur lors de l’envoi de l’email :', errorMessage)
 
-    return NextResponse.json(
-      { success: false, error: errorMessage },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 })
   }
 }

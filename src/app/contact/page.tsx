@@ -60,7 +60,8 @@ export default function ContactPage() {
     // Validation
     if (!formData.name.trim()) return setErrorMessageAndStop('Le nom est requis')
     if (!formData.email.trim()) return setErrorMessageAndStop("L'email est requis")
-    if (!/^\S+@\S+\.\S+$/.test(formData.email)) return setErrorMessageAndStop("Format d'email invalide")
+    if (!/^\S+@\S+\.\S+$/.test(formData.email))
+      return setErrorMessageAndStop("Format d'email invalide")
     if (!formData.subject.trim()) return setErrorMessageAndStop('Le sujet est requis')
     if (!formData.message.trim()) return setErrorMessageAndStop('Le message est requis')
 
@@ -73,7 +74,8 @@ export default function ContactPage() {
 
       const data = await res.json().catch(() => ({}))
 
-      if (!res.ok) throw new Error((data as { error?: string }).error || `Erreur HTTP! statut: ${res.status}`)
+      if (!res.ok)
+        throw new Error((data as { error?: string }).error || `Erreur HTTP! statut: ${res.status}`)
 
       if ((data as { success?: boolean; error?: string }).success) {
         setIsSubmitted(true)
@@ -201,7 +203,12 @@ export default function ContactPage() {
                     <span className="font-medium">{m.label}</span>
                   </div>
                   {m.link ? (
-                    <a href={m.link} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
+                    <a
+                      href={m.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-300 hover:text-white transition-colors"
+                    >
                       {m.value}
                     </a>
                   ) : (

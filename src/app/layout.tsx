@@ -45,8 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     href="/rgpd/conditions"
                     className="hover:text-white transition-colors duration-300"
                   >
-              Conditions d&apos;utilisation
-
+                    Conditions d&apos;utilisation
                   </Link>
                   <Link
                     href="/rgpd/mentions_legales"

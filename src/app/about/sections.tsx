@@ -112,7 +112,9 @@ export const MissionSection = memo(() => {
   const { t, tObject } = useTranslation()
   const animations = createAnimationVariants()
   // Utilisation directe avec suppression du conflit de types
-  const missionStatements = useMissionStatements(tObject as Parameters<typeof useMissionStatements>[0])
+  const missionStatements = useMissionStatements(
+    tObject as Parameters<typeof useMissionStatements>[0]
+  )
 
   return (
     <section className="py-32 bg-gradient-to-br from-purple-950/90 via-gray-900 to-blue-950/90 relative overflow-hidden">

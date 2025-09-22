@@ -1,6 +1,8 @@
 import { NextRequest } from 'next/server'
 
-export async function sanitizeRequest<T>(req: NextRequest | Request): Promise<{ data: T | null; error?: string }> {
+export async function sanitizeRequest<T>(
+  req: NextRequest | Request
+): Promise<{ data: T | null; error?: string }> {
   try {
     const contentType = req.headers.get('content-type')
     if (!contentType?.includes('application/json')) {

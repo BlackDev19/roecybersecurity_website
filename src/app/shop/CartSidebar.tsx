@@ -60,7 +60,7 @@ const CartSidebar = ({
   )
 
   // Numéro WhatsApp
-  const whatsappNumber = "19126223901" // +1 (912) 622-3901 sans les caractères spéciaux
+  const whatsappNumber = '19126223901' // +1 (912) 622-3901 sans les caractères spéciaux
 
   useEffect(() => {
     if (toast.show) {

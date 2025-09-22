@@ -47,7 +47,9 @@ declare global {
       }
     }
     Stripe?: (key: string) => {
-      redirectToCheckout: (options: { sessionId: string }) => Promise<{ error?: { message: string } }>
+      redirectToCheckout: (options: {
+        sessionId: string
+      }) => Promise<{ error?: { message: string } }>
     }
   }
 }
@@ -69,40 +71,39 @@ export const usePayment = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const processPayment = useCallback(async (
-    method: 'stripe' | 'paypal' | 'affirm',
-    cart: Configuration[],
-    customer: Customer
-  ) => {
-    setLoading(true)
-    setError(null)
+  const processPayment = useCallback(
+    async (method: 'stripe' | 'paypal' | 'affirm', cart: Configuration[], customer: Customer) => {
+      setLoading(true)
+      setError(null)
 
-    try {
-      if (!Array.isArray(cart) || cart.length === 0 || !customer?.email.includes('@')) {
-        throw new Error('Données client ou panier invalides')
-      }
+      try {
+        if (!Array.isArray(cart) || cart.length === 0 || !customer?.email.includes('@')) {
+          throw new Error('Données client ou panier invalides')
+        }
 
-      switch (method) {
-        case 'stripe':
-          await processStripePayment(cart, customer)
-          break
-        case 'paypal':
-          await processPayPalPayment(cart, customer)
-          break
-        case 'affirm':
-          await processAffirmPayment(cart, customer)
-          break
-        default:
-          throw new Error(`Méthode de paiement non supportée: ${method}`)
+        switch (method) {
+          case 'stripe':
+            await processStripePayment(cart, customer)
+            break
+          case 'paypal':
+            await processPayPalPayment(cart, customer)
+            break
+          case 'affirm':
+            await processAffirmPayment(cart, customer)
+            break
+          default:
+            throw new Error(`Méthode de paiement non supportée: ${method}`)
+        }
+      } catch (err) {
+        console.error('Erreur de paiement:', err)
+        setError(err instanceof Error ? err.message : 'Erreur de paiement')
+        throw err
+      } finally {
+        setLoading(false)
       }
-    } catch (err) {
-      console.error('Erreur de paiement:', err)
-      setError(err instanceof Error ? err.message : 'Erreur de paiement')
-      throw err
-    } finally {
-      setLoading(false)
-    }
-  }, [])
+    },
+    []
+  )
 
   return { processPayment, loading, error }
 }
@@ -175,12 +176,12 @@ const processAffirmPayment = async (cart: Configuration[], customer: Customer) =
   try {
     let retries = 0
     while (!window.affirm && retries < 10) {
-      await new Promise(resolve => setTimeout(resolve, 500))
+      await new Promise((resolve) => setTimeout(resolve, 500))
       retries++
     }
 
     if (!window.affirm) {
-      throw new Error('Le SDK Affirm n\'est pas disponible. Veuillez recharger la page.')
+      throw new Error("Le SDK Affirm n'est pas disponible. Veuillez recharger la page.")
     }
 
     const total = cart.reduce((sum, item) => sum + (item.price || 0), 0)
@@ -261,7 +262,9 @@ const loadStripe = async (publishableKey: string) => {
     const script = document.createElement('script')
     script.src = 'https://js.stripe.com/v3/'
     document.head.appendChild(script)
-    await new Promise(resolve => { script.onload = resolve })
+    await new Promise((resolve) => {
+      script.onload = resolve
+    })
   }
 
   if (!window.Stripe) {

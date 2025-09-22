@@ -53,7 +53,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // Vérifier les variables d'environnement
-    if (!process.env.PAYPAL_CLIENT_ID || !process.env.PAYPAL_CLIENT_SECRET || !process.env.PAYPAL_API_URL) {
+    if (
+      !process.env.PAYPAL_CLIENT_ID ||
+      !process.env.PAYPAL_CLIENT_SECRET ||
+      !process.env.PAYPAL_API_URL
+    ) {
       return res.status(500).json({ message: 'Configuration PayPal manquante' })
     }
 
@@ -61,9 +65,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const authResponse = await fetch(`${process.env.PAYPAL_API_URL}/v1/oauth2/token`, {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Accept-Language': 'en_US',
-        'Authorization': `Basic ${Buffer.from(
+        Authorization: `Basic ${Buffer.from(
           `${process.env.PAYPAL_CLIENT_ID}:${process.env.PAYPAL_CLIENT_SECRET}`
         ).toString('base64')}`,
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -80,17 +84,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Préparer les items pour PayPal
     const items = cart.map((item, index) => ({
       name: `Configuration PC #${index + 1}`,
-      description: [
-        item.cpu && `CPU: ${item.cpu}`,
-        item.gpu && `GPU: ${item.gpu}`,
-        item.ram && `RAM: ${item.ram}`,
-        item.storage && `Storage: ${item.storage}`
-      ].filter(Boolean).join(', ') || 'Configuration personnalisée',
+      description:
+        [
+          item.cpu && `CPU: ${item.cpu}`,
+          item.gpu && `GPU: ${item.gpu}`,
+          item.ram && `RAM: ${item.ram}`,
+          item.storage && `Storage: ${item.storage}`,
+        ]
+          .filter(Boolean)
+          .join(', ') || 'Configuration personnalisée',
       quantity: '1',
       unit_amount: {
         currency_code: 'USD',
-        value: (item.price || 0).toFixed(2)
-      }
+        value: (item.price || 0).toFixed(2),
+      },
     }))
 
     // Créer la commande PayPal
@@ -98,28 +105,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authData.access_token}`,
+        Authorization: `Bearer ${authData.access_token}`,
         'PayPal-Request-Id': `roe-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`, // ID unique pour éviter les doublons
       },
       body: JSON.stringify({
         intent: 'CAPTURE',
-        purchase_units: [{
-          reference_id: `roe-order-${Date.now()}`,
-          amount: {
-            currency_code: 'USD',
-            value: total.toFixed(2),
-            breakdown: {
-              item_total: {
-                currency_code: 'USD',
-                value: total.toFixed(2)
-              }
-            }
+        purchase_units: [
+          {
+            reference_id: `roe-order-${Date.now()}`,
+            amount: {
+              currency_code: 'USD',
+              value: total.toFixed(2),
+              breakdown: {
+                item_total: {
+                  currency_code: 'USD',
+                  value: total.toFixed(2),
+                },
+              },
+            },
+            items: items,
+            description: `Commande ROE Computers - ${cart.length} configuration(s)`,
+            custom_id: `customer-${customer.email}`,
+            soft_descriptor: 'ROE COMPUTERS',
           },
-          items: items,
-          description: `Commande ROE Computers - ${cart.length} configuration(s)`,
-          custom_id: `customer-${customer.email}`,
-          soft_descriptor: 'ROE COMPUTERS'
-        }],
+        ],
         application_context: {
           brand_name: 'ROE Computers',
           locale: 'en-US',
@@ -133,9 +142,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           email_address: customer.email,
           name: {
             given_name: customer.name.split(' ')[0] || customer.name,
-            surname: customer.name.split(' ').slice(1).join(' ') || 'Client'
-          }
-        }
+            surname: customer.name.split(' ').slice(1).join(' ') || 'Client',
+          },
+        },
       }),
     })
 
@@ -146,12 +155,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const orderData: PayPalOrderResponse = await orderResponse.json()
-    
+
     // Trouver l'URL d'approbation avec typage approprié
     const approvalUrl = orderData.links.find((link: PayPalLink) => link.rel === 'approve')?.href
 
     if (!approvalUrl) {
-      throw new Error('URL d\'approbation PayPal non trouvée')
+      throw new Error("URL d'approbation PayPal non trouvée")
     }
 
     // Logging pour le debugging (à supprimer en production)
@@ -159,26 +168,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       orderId: orderData.id,
       customerId: customer.email,
       total: total,
-      itemCount: cart.length
+      itemCount: cart.length,
     })
 
-    res.status(200).json({ 
-      approvalUrl, 
+    res.status(200).json({
+      approvalUrl,
       orderId: orderData.id,
-      status: orderData.status
+      status: orderData.status,
     })
   } catch (error) {
     console.error('Erreur PayPal:', error)
-    
+
     // Gestion d'erreur plus spécifique
     if (error instanceof Error) {
-      res.status(500).json({ 
+      res.status(500).json({
         message: 'Erreur lors de la création de la commande PayPal',
-        details: error.message 
+        details: error.message,
       })
     } else {
-      res.status(500).json({ 
-        message: 'Erreur inconnue lors de la création de la commande PayPal' 
+      res.status(500).json({
+        message: 'Erreur inconnue lors de la création de la commande PayPal',
       })
     }
   }

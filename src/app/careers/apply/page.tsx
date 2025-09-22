@@ -62,7 +62,7 @@ const validateFile = (
   }
 
   const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase()
-  if (!ACCEPTED_FILE_TYPES.includes(fileExtension as typeof ACCEPTED_FILE_TYPES[number])) {
+  if (!ACCEPTED_FILE_TYPES.includes(fileExtension as (typeof ACCEPTED_FILE_TYPES)[number])) {
     return { field: 'resume', message: t('apply.status.error.invalidFileType') }
   }
 
@@ -130,7 +130,9 @@ const Toast = ({ toast, onClose }: { toast: ToastState; onClose: () => void }) =
           )}
         </motion.div>
         <div className="flex-1">
-          <p className="text-sm font-semibold">{toast.type === 'success' ? 'Succès !' : 'Erreur'}</p>
+          <p className="text-sm font-semibold">
+            {toast.type === 'success' ? 'Succès !' : 'Erreur'}
+          </p>
           <p className="text-sm opacity-90">{toast.message}</p>
         </div>
         <button
@@ -232,7 +234,15 @@ export default function ApplyPage() {
   )
 
   const resetForm = useCallback(() => {
-    setFormData({ firstName: '', lastName: '', email: '', phone: '', position: '', message: '', resume: null })
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      position: '',
+      message: '',
+      resume: null,
+    })
     setFieldErrors({})
     if (fileInputRef.current) fileInputRef.current.value = ''
   }, [])
@@ -264,7 +274,8 @@ export default function ApplyPage() {
         const res = await fetch('/api/apply', { method: 'POST', body: payload })
         const data = await res.json()
 
-        if (!res.ok || data.error) showToast('error', data.message || t('apply.status.error.message'))
+        if (!res.ok || data.error)
+          showToast('error', data.message || t('apply.status.error.message'))
         else {
           showToast('success', t('apply.status.success.message'))
           resetForm()
@@ -317,7 +328,10 @@ export default function ApplyPage() {
         </main>
 
         <nav className="text-center mt-12">
-          <a href="/careers" className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 text-sm transition-colors">
+          <a
+            href="/careers"
+            className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 text-sm transition-colors"
+          >
             <ArrowLeft className="h-4 w-4" />
             {t('apply.backLink')}
           </a>

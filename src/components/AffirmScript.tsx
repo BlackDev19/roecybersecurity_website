@@ -1,23 +1,25 @@
-"use client"
+'use client'
 
-import Script from "next/script"
+import Script from 'next/script'
 
 export default function AffirmScript() {
   return (
     <>
       {/* SDK Affirm */}
       <Script
-        src={process.env.NODE_ENV === "production"
-          ? "https://cdn1.affirm.com/js/v2/affirm.js"
-          : "https://cdn1-sandbox.affirm.com/js/v2/affirm.js"}
+        src={
+          process.env.NODE_ENV === 'production'
+            ? 'https://cdn1.affirm.com/js/v2/affirm.js'
+            : 'https://cdn1-sandbox.affirm.com/js/v2/affirm.js'
+        }
         strategy="afterInteractive"
         onLoad={() => {
-          if (process.env.NODE_ENV === "development") {
-            console.log("✅ Affirm SDK chargé avec succès")
+          if (process.env.NODE_ENV === 'development') {
+            console.log('✅ Affirm SDK chargé avec succès')
           }
         }}
         onError={(e) => {
-          console.error("❌ Erreur lors du chargement du SDK Affirm:", e)
+          console.error('❌ Erreur lors du chargement du SDK Affirm:', e)
         }}
       />
 
@@ -28,13 +30,15 @@ export default function AffirmScript() {
         dangerouslySetInnerHTML={{
           __html: `
             window.affirmConfig = {
-              public_api_key: "${process.env.NODE_ENV === "production"
-                ? process.env.NEXT_PUBLIC_AFFIRM_PUBLIC_API_KEY || ""
-                : process.env.NEXT_PUBLIC_AFFIRM_SANDBOX_PUBLIC_API_KEY || ""
+              public_api_key: "${
+                process.env.NODE_ENV === 'production'
+                  ? process.env.NEXT_PUBLIC_AFFIRM_PUBLIC_API_KEY || ''
+                  : process.env.NEXT_PUBLIC_AFFIRM_SANDBOX_PUBLIC_API_KEY || ''
               }",
-              script: "${process.env.NODE_ENV === "production"
-                ? "https://cdn1.affirm.com/js/v2/affirm.js"
-                : "https://cdn1-sandbox.affirm.com/js/v2/affirm.js"
+              script: "${
+                process.env.NODE_ENV === 'production'
+                  ? 'https://cdn1.affirm.com/js/v2/affirm.js'
+                  : 'https://cdn1-sandbox.affirm.com/js/v2/affirm.js'
               }"
             };
 
@@ -56,7 +60,7 @@ export default function AffirmScript() {
               
               setTimeout(checkAffirm, 100);
             });
-          `
+          `,
         }}
       />
     </>
